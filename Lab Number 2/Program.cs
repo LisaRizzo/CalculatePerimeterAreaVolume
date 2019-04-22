@@ -15,7 +15,7 @@ namespace Lab_Number_2
         while (repeat1 == true)
         {
           //Prompt user to enter height, length, width, area, perimeter.
-          Console.WriteLine("Enter : ");
+          Console.WriteLine("Enter Height: ");
 
           string height = Console.ReadLine();
 
@@ -26,7 +26,6 @@ namespace Lab_Number_2
 
           string len = Console.ReadLine();
 
-          //Convert the string into an double.
           double userLength = Convert.ToDouble(len);
 
           Console.WriteLine("Enter Width: ");
@@ -37,12 +36,13 @@ namespace Lab_Number_2
 
           Console.WriteLine("Area: " + (userLength * userWidth));
           Console.WriteLine("Perimeter: " + ((userLength * 2) + (userWidth * 2)));
+          Console.WriteLine("Volume: " + (userLength * userWidth * userHeight));
 
           //User acknowledge results.
           Console.WriteLine("Continue? Y/N");
           doAgain = Convert.ToChar(Console.ReadLine());
 
-          if (doAgain == 'y' && doAgain == 'Y')
+          if (doAgain == 'y' || doAgain == 'Y')
           {
             repeat1 = true;
           }
